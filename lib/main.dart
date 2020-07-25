@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:newFirebase_Project/features/admin/UI/admin_home.dart';
+import 'package:newFirebase_Project/features/customer/UI/customer_home.dart';
+import 'package:newFirebase_Project/service/login_page.dart';
 import 'package:provider/provider.dart';
 import 'features/admin/providers/adminProvider.dart';
 
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title:'plantApp',
-        home:AdminHome()
+        home:Login()
 
         )
       
