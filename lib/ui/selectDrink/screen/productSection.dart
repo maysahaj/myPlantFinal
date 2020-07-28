@@ -40,7 +40,7 @@ class _ProductSectionState extends State<ProductSection> {
                   ),
                 ),
                 title: Text(
-                  products[index].typeCoffee,
+                  products[index].typePlant,
 
                   style: GoogleFonts.sourceSansPro(
                     color: kPrimaryColor,

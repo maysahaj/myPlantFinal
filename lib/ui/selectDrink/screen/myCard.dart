@@ -77,7 +77,7 @@ class MyCard extends StatelessWidget {
                       child: ExpansionTile(
                         backgroundColor: Color(0xFFF8E8D4),
                         title: Text(
-                          allProducts[index].typeCoffee,
+                          allProducts[index].typePlant,
                           style: TextStyle(
                             color: kPrimaryColor,
                             fontSize: 18,
@@ -86,7 +86,7 @@ class MyCard extends StatelessWidget {
                         children: <Widget>[
                           Center(
                             child: Text(
-                              '${allProducts[index].typeCoffee}',
+                              '${allProducts[index].typePlant}',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 25,
@@ -139,7 +139,7 @@ class MyCard extends StatelessWidget {
                                 Row(
                                   children: <Widget>[
                                     Text(
-                                      '${allProducts[index].numCup}',
+                                      '${allProducts[index].numPlant}',
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.brown[300],
@@ -215,19 +215,7 @@ class MyCard extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                Text(
-                                  allProducts[index].sugar == 1
-                                      ? 'Sugarless'
-                                      : allProducts[index].sugar == 2
-                                          ? 'Sugar cube '
-                                          : '2 Sugar cubes',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                    color: kPrimaryColor,
-                                  ),
-                                ),
-                              ],
+                            ],
                             ),
                           ),
                           Divider(
@@ -248,7 +236,7 @@ class MyCard extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  '${allProducts[index].price * allProducts[index].numCup}\$',
+                                  '${allProducts[index].price * allProducts[index].numPlant}\$',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,

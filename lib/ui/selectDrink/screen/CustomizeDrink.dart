@@ -98,7 +98,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      widget.productA.typeCoffee,
+                      widget.productA.typePlant,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -292,10 +292,9 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
             onPressed: () {
               try {
                 Product p = Product(
-                  numCup: provider.numCup,
+                  numPlant: provider.numCup,
                   price: widget.productA.price,
-                  sugar: provider.sugar,
-                  typeCoffee: widget.productA.typeCoffee,
+                  typePlant: widget.productA.typePlant,
                   size: provider.size,
                   image: widget.productA.image,
                 );
