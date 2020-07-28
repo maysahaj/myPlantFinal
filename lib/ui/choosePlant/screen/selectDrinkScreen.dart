@@ -1,7 +1,7 @@
 import 'package:newFirebase_Project/auth.dart';
 import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/ui/home/homeScreen.dart';
-import 'package:newFirebase_Project/ui/selectDrink/screen/map.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/map.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';

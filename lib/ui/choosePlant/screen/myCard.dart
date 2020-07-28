@@ -278,7 +278,7 @@ class MyCard extends StatelessWidget {
 
                     AwesomeDialog(
                       context: context,
-                      dialogType: DialogType.SUCCES,
+                      dialogType: DialogType.NO_HEADER,
                       animType: AnimType.BOTTOMSLIDE,
                       title: 'Your request has been sent',
                       desc: 'total= ${myProvider.totalPriceInUi}\$',

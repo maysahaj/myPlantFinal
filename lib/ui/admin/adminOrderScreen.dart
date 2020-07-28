@@ -22,7 +22,7 @@ class AdminOrderScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Flutter coffee',
+          'Flutter plant',
           style: GoogleFonts.pacifico(
             color: kPrimaryColor,
             fontSize: 25,
@@ -55,7 +55,7 @@ class AdminOrderScreen extends StatelessWidget {
               return Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF0F0EC),
+                  color: kPrimaryColor2,
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(

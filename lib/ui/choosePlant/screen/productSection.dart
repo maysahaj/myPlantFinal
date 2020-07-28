@@ -3,7 +3,7 @@ import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/models/products.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newFirebase_Project/ui/selectDrink/screen/CustomizeDrink.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/CustomizeDrink.dart';
 
 
 class ProductSection extends StatefulWidget {

@@ -12,9 +12,8 @@ class DBClient {
 
   final String productTable = 'product';
   final String productIdColumn = 'productId';
-  final String typeCoffeeColumn = 'typeCoffee';
-  final String numCupColumn = 'numCupColumn';
-  final String sugarColumn = 'sugarColumn';
+  final String typePlantColumn = 'typePlant';
+  final String numPlantColumn = 'numPlant';
   final String priceColumn = 'priceColumn';
   final String sizeColumn = 'sizeColumn';
   final String imageColumn = 'imageColumn';
@@ -39,9 +38,8 @@ class DBClient {
       onCreate: (db, version) {
         db.execute('''CREATE TABLE $productTable(
           $productIdColumn INTEGER PRIMARY KEY AUTOINCREMENT,
-          $typeCoffeeColumn TEXT NOT NULL,
-          $numCupColumn INTEGER NOT NULL,
-          $sugarColumn INTEGER NOT NULL,
+          $typePlantColumn TEXT NOT NULL,
+          $numPlantColumn INTEGER NOT NULL,
           $sizeColumn INTEGER NOT NULL,
           $priceColumn INTEGER NOT NULL,
           $imageColumn TEXT NOT NULL

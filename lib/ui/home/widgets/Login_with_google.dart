@@ -2,7 +2,7 @@
 
 import 'package:newFirebase_Project/auth.dart';
 import 'package:newFirebase_Project/constant.dart';
-import 'package:newFirebase_Project/ui/selectDrink/screen/selectDrinkScreen.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/selectDrinkScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

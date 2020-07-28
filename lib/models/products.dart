@@ -18,9 +18,9 @@ class Product {
 
   Product.fromJson(Map<String, dynamic> map) {
     this.id = map[DBClient.dbClient.productIdColumn];
-    this.typePlant = map[DBClient.dbClient.typeCoffeeColumn];
+    this.typePlant = map[DBClient.dbClient.typePlantColumn];
     this.price = map[DBClient.dbClient.priceColumn];
-    this.numPlant = map[DBClient.dbClient.numCupColumn];
+    this.numPlant = map[DBClient.dbClient.numPlantColumn];
     this.size = map[DBClient.dbClient.sizeColumn];
     this.image=map[DBClient.dbClient.imageColumn];
 
@@ -28,9 +28,9 @@ class Product {
 
   Map<String , dynamic> toJson() {
     return {
-      DBClient.dbClient.typeCoffeeColumn: this.typePlant,
+      DBClient.dbClient.typePlantColumn: this.typePlant,
       DBClient.dbClient.priceColumn: this.price,
-      DBClient.dbClient.numCupColumn: this.numPlant,
+      DBClient.dbClient.numPlantColumn: this.numPlant,
       DBClient.dbClient.sizeColumn: this.size,
       DBClient.dbClient.imageColumn: this.image,
     };
