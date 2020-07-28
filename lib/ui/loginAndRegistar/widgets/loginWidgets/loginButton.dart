@@ -45,10 +45,10 @@ class LoginButton extends StatelessWidget {
       }catch(e){
         Scaffold.of(context).showSnackBar(
           SnackBar(
-            backgroundColor: Color(0xFFF0F0EC),
+            backgroundColor:Colors.black,
             content: Text(
               'This username is not already used.\nTry another username',
-              style: TextStyle(color: Color(0xFF111328), fontSize: 18),
+              style: TextStyle(color:kPrimaryColor2, fontSize: 18),
             ),
           ),
         ) ;

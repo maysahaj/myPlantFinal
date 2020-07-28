@@ -75,7 +75,7 @@ class MyCard extends StatelessWidget {
                         ),
                       ],
                       child: ExpansionTile(
-                        backgroundColor: Color(0xFFF8E8D4),
+                        backgroundColor: kBackgroundColor,
                         title: Text(
                           allProducts[index].typePlant,
                           style: TextStyle(
@@ -104,9 +104,7 @@ class MyCard extends StatelessWidget {
                             ),
                             tag: '${allProducts[index].image}',
                           ),
-                          Divider(
-                            color: kPrimaryColor,
-                          ),
+                        
                           Container(
                             //height: 100,
                             //color: Colors.cyanAccent,
@@ -131,7 +129,7 @@ class MyCard extends StatelessWidget {
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
-                                        color: Colors.brown[300],
+                                        color: Colors.red,
                                       ),
                                     ),
                                   ],
@@ -142,12 +140,12 @@ class MyCard extends StatelessWidget {
                                       '${allProducts[index].numPlant}',
                                       style: TextStyle(
                                         fontSize: 20,
-                                        color: Colors.brown[300],
+                                        color: Colors.red,
                                       ),
                                     ),
                                     SizedBox(width: 5),
                                     Text(
-                                      'Cups',
+                                      'plants',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
@@ -159,9 +157,7 @@ class MyCard extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Divider(
-                            color: kPrimaryColor,
-                          ),
+         
                           Container(
                             //color: Colors.deepOrange,
                             padding: EdgeInsets.symmetric(
@@ -186,40 +182,11 @@ class MyCard extends StatelessWidget {
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
-                                    color: kPrimaryColor,
+                                    color: Colors.red,
                                   ),
                                 ),
                               ],
                             ),
-                          ),
-                          Divider(
-                            color: kPrimaryColor,
-                          ),
-                          Container(
-                            //height: 100,
-                            //color: Colors.cyanAccent,
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      'Sugar',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: kPrimaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                            ],
-                            ),
-                          ),
-                          Divider(
-                            color: kPrimaryColor,
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(
@@ -240,7 +207,7 @@ class MyCard extends StatelessWidget {
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
-                                    color: kPrimaryColor,
+                                    color: Colors.red,
                                   ),
                                 ),
                               ],
@@ -266,7 +233,7 @@ class MyCard extends StatelessWidget {
                     DateTime orderTime = DateTime.now();
 
                     Order order = Order(
-                      drinks: all,
+                      plants: all,
                       totalNumber: all.length.toString(),
                       totalPrice: myProvider.total.toString(),
                       date: '${orderTime.hour}:${orderTime.minute}',

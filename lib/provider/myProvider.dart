@@ -7,8 +7,7 @@ class MyProvider extends ChangeNotifier {
 
   String password;
   Color color = Colors.white;
-  int numCup = 0;
-  int sugar = 0;
+  int numPlant = 0;
   int size = 0;
   bool spinner = false;
 
@@ -44,7 +43,7 @@ class MyProvider extends ChangeNotifier {
 
   totalPrize(List<Map> value) {
     for (Map map in value) {
-      this.total += (map['priceColumn'] * map['numCupColumn']);
+      this.total += (map['priceColumn'] * map['numPlantColumn']);
       notifyListeners();
     }
   }
@@ -54,7 +53,7 @@ class MyProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  IconData iconData = FontAwesomeIcons.eyeSlash;
+  IconData iconData = FontAwesomeIcons.eye;
   bool toggleEye = true;
 
   final formKeyLogin = GlobalKey<FormState>();
@@ -99,17 +98,17 @@ class MyProvider extends ChangeNotifier {
   }
 
   getNumCup(int value) {
-    this.numCup = value;
+    this.numPlant = value;
     notifyListeners();
   }
 
   addNum() {
-    numCup++;
+    numPlant++;
     notifyListeners();
   }
 
   subNum() {
-    numCup--;
+    numPlant--;
     notifyListeners();
   }
 
@@ -118,10 +117,6 @@ class MyProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  selectNumSugar({int num}) {
-    sugar = num;
-    notifyListeners();
-  }
 
   fmToggleEye() {
     toggleEye = !toggleEye;

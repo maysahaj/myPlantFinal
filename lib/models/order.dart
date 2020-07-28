@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:newFirebase_Project/models/products.dart';
 
 class Order {
-  List<Map<String, dynamic>> drinks;
+  List<Map<String, dynamic>> plants;
   String docId;
   String userId;
   String totalPrice;
@@ -12,7 +12,7 @@ class Order {
   String date;
 
   Order(
-      {this.drinks,
+      {this.plants,
       this.userId,
       this.totalPrice,
       this.totalNumber,
@@ -27,17 +27,17 @@ class Order {
     this.date = documentSnapshot.data['date'];
     this.status = documentSnapshot.data['status'];
 //    this.drinks = documentSnapshot.data['drinks'];
-    if (documentSnapshot.data['drinks'] != null) {
-      drinks = List<Map<String, dynamic>>();
-      documentSnapshot.data['drinks'].forEach((v) {
-        drinks.add(Product.fromJson(v).toJson());
+    if (documentSnapshot.data['plants'] != null) {
+      plants = List<Map<String, dynamic>>();
+      documentSnapshot.data['plants'].forEach((v) {
+        plants.add(Product.fromJson(v).toJson());
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'drinks': this.drinks,
+      'drinks': this.plants,
       'userId': this.userId,
       'totalPrice': this.totalPrice,
       'totalNumber': this.totalNumber,

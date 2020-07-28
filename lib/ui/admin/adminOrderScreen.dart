@@ -131,7 +131,7 @@ class AdminOrderScreen extends StatelessWidget {
                                 Container(
                                   child: ListTile(
                                     title: Text(
-                                      'Drinks',
+                                      'Plants',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
@@ -171,7 +171,7 @@ class AdminOrderScreen extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
-                                        'Number of Drinks',
+                                        'Number of Plants',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20,
@@ -245,7 +245,7 @@ class AdminOrderScreen extends StatelessWidget {
                                                   orders[index].totalNumber,
                                               date: orders[index].date,
                                               status: orders[index].status,
-                                              drinks: orders[index].drinks,
+                                              plants: orders[index].plants,
                                               userId: orders[index].userId);
 
                                           Provider.of<OrderProvider>(context,listen: false)

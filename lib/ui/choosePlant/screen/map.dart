@@ -8,11 +8,11 @@ class MyMap extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMap> {
-  static LatLng flutterCoffee = LatLng(31.509557, 34.421466);
+  static LatLng flutterPlant = LatLng(31.509557, 34.421466);
   Set<Marker> myMarkers = {
     Marker(
-      markerId: MarkerId('flutterCoffee'),
-      position: flutterCoffee,
+      markerId: MarkerId('flutterPlant'),
+      position: flutterPlant,
     ),
   };
   GoogleMapController controller;
@@ -52,7 +52,7 @@ tilt:40 ,
               this.controller = controller;
               await getCurrentLocation();
               AnimateCamera(
-                  flutterCoffee,
+                  flutterPlant,
               );
             },
             onTap: (argument) {
@@ -66,7 +66,7 @@ tilt:40 ,
             },
             markers: { ...?myMarkers ,
               Marker(
-                icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+                icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
               markerId: MarkerId('argument'),
               position: LatLng(myLocation.latitude, myLocation.longitude),
             ),

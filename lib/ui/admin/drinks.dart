@@ -20,12 +20,12 @@ Drinks({ this.order});
           Expanded(
             flex: 8,
             child: ListView.builder(
-              itemCount: order.drinks.length,
+              itemCount: order.plants.length,
               itemBuilder: (context, index2) {
                 return ExpansionTile(
                   backgroundColor: Color(0xFFF8E8D4),
                   title: Text(
-                    order.drinks[index2]['typeCoffee'],
+                    order.plants[index2]['typePlant'],
                     style: TextStyle(
                       color: kPrimaryColor,
                       fontSize: 18,
@@ -34,7 +34,7 @@ Drinks({ this.order});
                   children: <Widget>[
                     Center(
                       child: Text(
-                        '${order.drinks[index2]['typeCoffee']}',
+                        '${order.plants[index2]['typePlant']}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -68,7 +68,7 @@ Drinks({ this.order});
                               ),
                               SizedBox(height: 5),
                               Text(
-                                '${order.drinks[index2]['priceColumn']}\$',
+                                '${order.plants[index2]['priceColumn']}\$',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
@@ -80,7 +80,7 @@ Drinks({ this.order});
                           Row(
                             children: <Widget>[
                               Text(
-                                '${order.drinks[index2]['numCupColumn']}',
+                                '${order.plants[index2]['numPlantColumn']}',
                                 style: TextStyle(
                                   fontSize: 20,
                                   color: Colors.brown[300],
@@ -100,9 +100,7 @@ Drinks({ this.order});
                         ],
                       ),
                     ),
-                    Divider(
-                      color: kPrimaryColor,
-                    ),
+
                     Container(
                       //color: Colors.deepOrange,
                       padding:
@@ -119,9 +117,9 @@ Drinks({ this.order});
                             ),
                           ),
                           Text(
-                            order.drinks[index2]['sizeColumn'] == 1
+                            order.plants[index2]['sizeColumn'] == 1
                                 ? 'Small'
-                                : order.drinks[index2]['sizeColumn'] == 2
+                                : order.plants[index2]['sizeColumn'] == 2
                                     ? 'Middle '
                                     : 'Large',
                             style: TextStyle(
@@ -156,19 +154,7 @@ Drinks({ this.order});
                               ),
                             ],
                           ),
-                          Text(
-                            order.drinks[index2]['sugarColumn'] == 1
-                                ? 'Sugarless'
-                                : order.drinks[index2]['sugarColumn'] == 2
-                                    ? 'Sugar cube '
-                                    : '2 Sugar cubes',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                              color: kPrimaryColor2,
-                            ),
-                          ),
-                        ],
+                       ],
                       ),
                     ),
                     Divider(
@@ -189,7 +175,7 @@ Drinks({ this.order});
                             ),
                           ),
                           Text(
-                            '${order.drinks[index2]['priceColumn'] * order.drinks[index2]['numCupColumn']}\$',
+                            '${order.plants[index2]['priceColumn'] * order.plants[index2]['numPlantColumn']}\$',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,

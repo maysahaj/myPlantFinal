@@ -1,7 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/models/products.dart';
 import 'package:newFirebase_Project/provider/db_provider.dart';
@@ -42,7 +41,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
         backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back_ios,
+            Icons.keyboard_arrow_left,
           ),
           color: kPrimaryColor2,
           onPressed: () {
@@ -52,7 +51,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
         actions: <Widget>[
           IconButton(
             icon: Icon(
-              FontAwesomeIcons.listAlt,
+              Icons.more_horiz,
               color: kPrimaryColor,
               size: 35,
             ),
@@ -120,7 +119,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                     child: Row(
                   children: <Widget>[
                     Text(
-                      '${provider.numCup < 0 ? 0 : provider.numCup}',
+                      '${provider.numPlant < 0 ? 0 : provider.numPlant}',
                       style: TextStyle(
                         fontSize: 20,
                         color: kPrimaryColor2,
@@ -129,8 +128,8 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                     SizedBox(width: 10),
                     GestureDetector(
                       onTap: () {
-                        provider.numCup < 0
-                            ? provider.numCup = 0
+                        provider.numPlant < 0
+                            ? provider.numPlant = 0
                             : Provider.of<MyProvider>(context, listen: false)
                                 .addNum();
                       },
@@ -153,8 +152,8 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                     SizedBox(width: 5),
                     GestureDetector(
                       onTap: () {
-                        provider.numCup < 0
-                            ? provider.numCup = 0
+                        provider.numPlant < 0
+                            ? provider.numPlant = 0
                             : Provider.of<MyProvider>(context, listen: false)
                                 .subNum();
                         setState(() {});
@@ -277,7 +276,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                   ),
                 ),
                 Text(
-                  '${widget.productA.price * Provider.of<MyProvider>(context).numCup}\$',
+                  '${widget.productA.price * Provider.of<MyProvider>(context).numPlant}\$',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -292,7 +291,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
             onPressed: () {
               try {
                 Product p = Product(
-                  numPlant: provider.numCup,
+                  numPlant: provider.numPlant,
                   price: widget.productA.price,
                   typePlant: widget.productA.typePlant,
                   size: provider.size,

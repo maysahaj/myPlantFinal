@@ -107,7 +107,7 @@ class AllOrderScreen extends StatelessWidget {
                               Container(
                                 child: ListTile(
                                   title: Text(
-                                    'Drinks',
+                                    'plants',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -141,7 +141,7 @@ class AllOrderScreen extends StatelessWidget {
                                               height: 100,
                                               child: ListView.builder(
                                                 itemCount: order[index]
-                                                    .drinks
+                                                    .plants
                                                     .length,
                                                 itemBuilder: (context, index2) {
                                                   return Container(
@@ -154,7 +154,7 @@ class AllOrderScreen extends StatelessWidget {
                                                               .spaceBetween,
                                                       children: <Widget>[
                                                         Text(
-                                                          '${order[index].drinks[index2]['typeCoffee']}',
+                                                          '${order[index].plants[index2]['typePlant']}',
                                                           style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,
@@ -165,7 +165,7 @@ class AllOrderScreen extends StatelessWidget {
                                                         ),
 //                                              SizedBox(width: 5),
                                                         Text(
-                                                          '${order[index].drinks[index2]['numCupColumn']} Cups',
+                                                          '${order[index].plants[index2]['numPlantColumn']} Cups',
                                                           style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,

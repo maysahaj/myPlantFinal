@@ -106,7 +106,6 @@ class SelectDrinkScreen extends StatelessWidget {
             ],
             indicatorColor: kBackgroundColor,
             
-
           ),
         ),
       ),
