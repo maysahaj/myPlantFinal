@@ -3,7 +3,7 @@ import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/models/products.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newFirebase_Project/ui/choosePlant/screen/CustomizeDrink.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/CustomizePlant.dart';
 
 
 class ProductSection extends StatefulWidget {
@@ -57,7 +57,7 @@ class _ProductSectionState extends State<ProductSection> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => CustomizeDrink(
+                            builder: (context) => SelectCustumPlant(
                                   productA: products[index],
                                 )),
                       );

@@ -4,7 +4,7 @@ import 'package:newFirebase_Project/provider/myProvider.dart';
 import 'package:newFirebase_Project/provider/order_provider.dart';
 import 'package:newFirebase_Project/ui/admin/adminOrderScreen.dart';
 import 'package:newFirebase_Project/ui/home/homeScreen.dart';
-import 'package:newFirebase_Project/ui/choosePlant/screen/selectDrinkScreen.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/choosePlantScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +25,7 @@ void main() async {
     if (check == null || check == false) {
       screen = HomeScreen();
     } else {
-      screen = SelectDrinkScreen();
+      screen = ChoosePlantScreen();
     }
   }
 

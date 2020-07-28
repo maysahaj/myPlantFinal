@@ -9,7 +9,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="newFirebase_Project"
         android:icon="@mipmap/ic_launcher">
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAxt48fhZCy430iA6jNmi9fhRXY43B-HTc"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCU4mW_GBJnH54XSrcHdxFL46BeUwKTC5I"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

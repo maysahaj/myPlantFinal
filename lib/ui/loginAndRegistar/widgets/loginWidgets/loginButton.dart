@@ -1,7 +1,7 @@
 import 'package:newFirebase_Project/auth.dart';
 import 'package:newFirebase_Project/provider/myProvider.dart';
 import 'package:newFirebase_Project/ui/admin/adminOrderScreen.dart';
-import 'package:newFirebase_Project/ui/choosePlant/screen/selectDrinkScreen.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/choosePlantScreen.dart';
 
 
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class LoginButton extends StatelessWidget {
             );
           } else{
             Navigator.push(context, MaterialPageRoute(
-              builder: (context) => SelectDrinkScreen(),
+              builder: (context) => ChoosePlantScreen(),
             ),
             ) ;
           }

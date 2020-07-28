@@ -2,7 +2,7 @@ import 'package:newFirebase_Project/auth.dart';
 import 'package:newFirebase_Project/provider/myProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:newFirebase_Project/ui/choosePlant/screen/selectDrinkScreen.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/choosePlantScreen.dart';
 import 'package:newFirebase_Project/constant.dart';
 
 class RegisterButton extends StatelessWidget {
@@ -34,7 +34,7 @@ class RegisterButton extends StatelessWidget {
               : Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => SelectDrinkScreen(),
+              builder: (context) => ChoosePlantScreen(),
             ),
           );
 //          Provider.of<MyProvider>(context,listen: false).toggleSpinner();

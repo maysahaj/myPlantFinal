@@ -8,7 +8,7 @@ class MyMap extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMap> {
-  static LatLng flutterPlant = LatLng(31.509557, 34.421466);
+  static LatLng flutterPlant = LatLng(31.502062, 34.640066);
   Set<Marker> myMarkers = {
     Marker(
       markerId: MarkerId('flutterPlant'),

@@ -5,23 +5,23 @@ import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/models/products.dart';
 import 'package:newFirebase_Project/provider/db_provider.dart';
 import 'package:newFirebase_Project/provider/myProvider.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/choosePlantScreen.dart';
 import 'package:provider/provider.dart';
 import 'myCard.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
-import 'selectDrinkScreen.dart';
 
 
-class CustomizeDrink extends StatefulWidget {
+class SelectCustumPlant extends StatefulWidget {
   final Product productA;
 
-  CustomizeDrink({this.productA});
+  SelectCustumPlant({this.productA});
 
   @override
   _CustomizeDrinkState createState() => _CustomizeDrinkState();
 }
 
-class _CustomizeDrinkState extends State<CustomizeDrink> {
+class _CustomizeDrinkState extends State<SelectCustumPlant> {
   @override
   Widget build(BuildContext context) {
     MyProvider provider = Provider.of<MyProvider>(context);
@@ -308,7 +308,7 @@ class _CustomizeDrinkState extends State<CustomizeDrink> {
                   desc: 'Your order has been added',
                   btnOkOnPress: () {
                     Navigator.pushReplacement(context, MaterialPageRoute(
-                      builder: (context) => SelectDrinkScreen(),
+                      builder: (context) => ChoosePlantScreen(),
                     ),);
                   },
                 )..show();

@@ -10,7 +10,7 @@ import 'allOrderScreen.dart';
 import 'myCard.dart';
 import 'productSection.dart';
 
-class SelectDrinkScreen extends StatelessWidget {
+class ChoosePlantScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
