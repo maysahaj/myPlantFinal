@@ -298,8 +298,8 @@ class _CustomizePlantState extends State<SelectCustumPlant> {
                   context: context,
                   dialogType: DialogType.NO_HEADER,
                   animType: AnimType.BOTTOMSLIDE,
-                  title: 'Accept the order',
-                  desc: 'Your order has been added',
+                  title: 'Agree the order',
+                  desc: 'Your order Plant has been added',
                   btnOkOnPress: () {
                     Navigator.pushReplacement(context, MaterialPageRoute(
                       builder: (context) => ChoosePlantScreen(),

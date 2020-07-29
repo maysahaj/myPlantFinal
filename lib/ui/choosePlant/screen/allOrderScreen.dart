@@ -116,7 +116,7 @@ class AllOrderScreen extends StatelessWidget {
                                   ),
                                   trailing: IconButton(
                                     icon: Icon(
-                                      FontAwesomeIcons.mugHot,
+                                      FontAwesomeIcons.leaf,
                                       size: 30,
                                       color: kPrimaryColor,
                                     ),
@@ -130,7 +130,7 @@ class AllOrderScreen extends StatelessWidget {
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10.0))),
                                             title: Text(
-                                              'Drinks',
+                                              'plants',
                                               style: GoogleFonts.sourceSansPro(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 25,
@@ -165,7 +165,7 @@ class AllOrderScreen extends StatelessWidget {
                                                         ),
 //                                              SizedBox(width: 5),
                                                         Text(
-                                                          '${order[index].plants[index2]['numPlantColumn']} Cups',
+                                                          '${order[index].plants[index2]['numPlantColumn']} plants',
                                                           style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.bold,
@@ -204,7 +204,7 @@ class AllOrderScreen extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
-                                      'Number of Drinks',
+                                      'Number of plants',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
@@ -213,7 +213,7 @@ class AllOrderScreen extends StatelessWidget {
                                     ),
                                     SizedBox(width: 5),
                                     Text(
-                                      '${order[index].totalNumber} Cups',
+                                      '${order[index].totalPrice} plants',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
@@ -223,7 +223,6 @@ class AllOrderScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-
                               SizedBox(
                                 child: Divider(
                                   color: kPrimaryColor,
@@ -231,31 +230,14 @@ class AllOrderScreen extends StatelessWidget {
                                 width: 320,
                               ),
                               Container(
-                                //height: 100,
-                                //color: Colors.cyanAccent,
+                                //color: Colors.deepOrange,
                                 padding: EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 20),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    Text(
-                                      'Request time',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: kPrimaryColor2,
-                                      ),
-                                    ),
-                                    Text(
-                                      '${order[index].date}',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: kPrimaryColor2,
-                                      ),
-                                    ),
-                                  ],
+                                ],
                                 ),
                               ),
                               SizedBox(
@@ -264,7 +246,8 @@ class AllOrderScreen extends StatelessWidget {
                                 ),
                                 width: 320,
                               ),
-                              Container(
+                            
+                             Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 20, horizontal: 20),
                                 child: Row(
@@ -272,7 +255,7 @@ class AllOrderScreen extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
-                                      'TOTAL',
+                                      'TOTALPrice',
                                       style: TextStyle(
                                         color: kPrimaryColor2,
                                         fontWeight: FontWeight.bold,
@@ -280,7 +263,7 @@ class AllOrderScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                      '${order[index].totalPrice}\$',
+                                      '${order[index].totalNumber}\$',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,

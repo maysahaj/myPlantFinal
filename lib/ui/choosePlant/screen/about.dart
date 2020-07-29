@@ -13,7 +13,7 @@ class About extends StatelessWidget {
         children: <Widget>[
          
           Text(
-            'mAYSA$EmailAuthProvider',
+            'mAYSA',
             style: GoogleFonts.pacifico(
               fontSize: 40.0,
               color: kPrimaryColor2,

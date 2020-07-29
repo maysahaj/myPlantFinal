@@ -41,17 +41,17 @@ final List<Product> products = [
   Product(
     image: 'assets/images/p3.png',
     typePlant: 'Gbit Plant',
-    price: 2,
+    price: 20,
   ),
 
   Product(
     image: 'assets/images/maysa.png',
     typePlant: 'type1 Plant',
-    price: 3,
+    price: 40,
   ),
   Product(
     image: 'assets/images/p2.png',
     typePlant: 'type2 Plant',
-    price: 4,
+    price: 60,
   ),
 ];

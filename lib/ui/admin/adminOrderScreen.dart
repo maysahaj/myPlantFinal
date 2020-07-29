@@ -178,7 +178,7 @@ class AdminOrderScreen extends StatelessWidget {
                                       ),
                                       SizedBox(width: 5),
                                       Text(
-                                        '${orders[index].totalNumber} Cups',
+                                        '${orders[index].totalPrice} plants',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18,
@@ -269,7 +269,7 @@ class AdminOrderScreen extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        '${orders[index].totalPrice}\$',
+                                        '${orders[index].totalNumber} plants\$',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20,

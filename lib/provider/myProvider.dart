@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:string_validator/string_validator.dart';
 
+
 class MyProvider extends ChangeNotifier {
   String email;
 
@@ -13,13 +14,7 @@ class MyProvider extends ChangeNotifier {
 
   int selectExpansionTile;
 
-  String selected = 'Procissing';
 
-  changeSelcted( String value) {
-    this.selected = value;
-    print(selected);
-    notifyListeners();
-  }
 
   updateOrder() {}
 
@@ -53,7 +48,7 @@ class MyProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  IconData iconData = FontAwesomeIcons.eye;
+  IconData iconData = FontAwesomeIcons.eyeSlash;
   bool toggleEye = true;
 
   final formKeyLogin = GlobalKey<FormState>();

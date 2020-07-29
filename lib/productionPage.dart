@@ -81,7 +81,7 @@ class _ProductSectionState extends State<ProductSectionpage> {
             child: Container(
               
                 alignment: Alignment.centerLeft,
-                child: new Text('Recent products',style: TextStyle(fontSize: 14.0,fontWeight:FontWeight.bold,))),),
+                child: new Text('Recent Plants',style: TextStyle(fontSize: 20.0,fontWeight:FontWeight.bold,))),),
 
           //grid view
           Flexible(child: ProductSection()),  
