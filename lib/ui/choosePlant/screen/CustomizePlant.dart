@@ -18,10 +18,10 @@ class SelectCustumPlant extends StatefulWidget {
   SelectCustumPlant({this.productA});
 
   @override
-  _CustomizeDrinkState createState() => _CustomizeDrinkState();
+  _CustomizePlantState createState() => _CustomizePlantState();
 }
 
-class _CustomizeDrinkState extends State<SelectCustumPlant> {
+class _CustomizePlantState extends State<SelectCustumPlant> {
   @override
   Widget build(BuildContext context) {
     MyProvider provider = Provider.of<MyProvider>(context);
@@ -110,7 +110,7 @@ class _CustomizeDrinkState extends State<SelectCustumPlant> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: Colors.brown[300],
+                        color: kPrimaryColor2,
                       ),
                     ),
                   ],
@@ -138,10 +138,7 @@ class _CustomizeDrinkState extends State<SelectCustumPlant> {
                         width: 30,
                         decoration: BoxDecoration(
                           color: kPrimaryColor2,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(40.0),
-                            bottomLeft: Radius.circular(40.0),
-                          ),
+                         
                         ),
                         child: Icon(
                           Icons.add,
@@ -163,10 +160,7 @@ class _CustomizeDrinkState extends State<SelectCustumPlant> {
                         width: 30,
                         decoration: BoxDecoration(
                           color: kPrimaryColor2,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(40.0),
-                            bottomRight: Radius.circular(40.0),
-                          ),
+                         
                         ),
                         child: Icon(
                           Icons.remove,

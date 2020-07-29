@@ -6,8 +6,6 @@ class Order {
   String docId;
   String userId;
   String totalPrice;
-  String status;
-
   String totalNumber;
   String date;
 
@@ -16,7 +14,6 @@ class Order {
       this.userId,
       this.totalPrice,
       this.totalNumber,
-      this.status = 'processing',
       this.date});
 
   Order.fromJson(DocumentSnapshot documentSnapshot) {
@@ -25,7 +22,6 @@ class Order {
     this.totalPrice = documentSnapshot.data['totalPrice'];
     this.totalNumber = documentSnapshot.data['totalNumber'];
     this.date = documentSnapshot.data['date'];
-    this.status = documentSnapshot.data['status'];
 //    this.drinks = documentSnapshot.data['drinks'];
     if (documentSnapshot.data['plants'] != null) {
       plants = List<Map<String, dynamic>>();
@@ -37,12 +33,11 @@ class Order {
 
   Map<String, dynamic> toJson() {
     return {
-      'drinks': this.plants,
+      'plants': this.plants,
       'userId': this.userId,
       'totalPrice': this.totalPrice,
       'totalNumber': this.totalNumber,
       'date': this.date,
-      'status': this.status,
     };
   }
 }

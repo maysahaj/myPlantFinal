@@ -22,19 +22,19 @@ class AdminOrderScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Flutter plant',
+          'Flutter Plants',
           style: GoogleFonts.pacifico(
             color: kPrimaryColor,
             fontSize: 25,
             fontWeight: FontWeight.w200,
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: kPrimaryColor2,
         leading: IconButton(
           icon: Icon(
             FontAwesomeIcons.signOutAlt,
           ),
-          color: kPrimaryColor2,
+          color: kBackgroundColor,
           onPressed: () async {
 //              await Provider.of<OrderProvider>(context,listen: false).deleteAllOrder() ;
             Auth.auth.signOut();
@@ -55,11 +55,11 @@ class AdminOrderScreen extends StatelessWidget {
               return Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: kPrimaryColor2,
+                  color: Color(0xFFF0F0EC),
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'images/bg.png',
+                      'images/img/back3.jpg',
                     ),
                   ),
                 ),
@@ -75,8 +75,6 @@ class AdminOrderScreen extends StatelessWidget {
                             actionExtentRatio: 0.25,
                             actions: <Widget>[
                               Visibility(
-                          visible: Provider.of<MyProvider>(context)
-                              .selected =='Done',
                                 child: IconSlideAction(
                                   caption: 'Delete',
                                   color: Colors.red,
@@ -92,7 +90,7 @@ class AdminOrderScreen extends StatelessWidget {
                                   Provider.of<MyProvider>(context)
                                           .selectExpansionTile ==
                                       index,
-                              backgroundColor: Color(0xFFF8E8D4),
+                              backgroundColor: kBackgroundColor,
                               onExpansionChanged: (value) {
                                 if (value) {
                                   Provider.of<MyProvider>(context,
@@ -131,7 +129,7 @@ class AdminOrderScreen extends StatelessWidget {
                                 Container(
                                   child: ListTile(
                                     title: Text(
-                                      'Plants',
+                                      'plants',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
@@ -140,14 +138,14 @@ class AdminOrderScreen extends StatelessWidget {
                                     ),
                                     trailing: IconButton(
                                       icon: Icon(
-                                        FontAwesomeIcons.mugHot,
+                                        FontAwesomeIcons.leaf,
                                         size: 30,
                                         color: kPrimaryColor,
                                       ),
                                       onPressed: () {
                                         Navigator.push(context,
                                         MaterialPageRoute(builder: (context) {
-                                          return Drinks(order: orders[index],);
+                                          return Plants(order: orders[index],);
                                         },)
                                         );
                                       },
@@ -212,56 +210,7 @@ class AdminOrderScreen extends StatelessWidget {
                                           color: kPrimaryColor2,
                                         ),
                                       ),
-                                      DropdownButton(
-                                        value: Provider.of<MyProvider>(context)
-                                            .selected,
-                                        items: <DropdownMenuItem<String>>[
-                                          DropdownMenuItem(
-                                            child: Text('Done'),
-                                            value: 'Done',
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text('Procissing'),
-                                            value: 'Procissing',
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text('reject'),
-                                            value: 'reject',
-                                          ),
-                                        ],
-                                        onChanged: (value) async {
-//
-                                          Provider.of<MyProvider>(context,
-                                                  listen: false)
-                                              .changeSelcted(value);
-                                          orders[index].status = Provider.of<MyProvider>(
-                                              context,
-                                              listen: false)
-                                              .selected;
-                                          Order order = Order(
-                                              totalPrice:
-                                                  orders[index].totalPrice,
-                                              totalNumber:
-                                                  orders[index].totalNumber,
-                                              date: orders[index].date,
-                                              status: orders[index].status,
-                                              plants: orders[index].plants,
-                                              userId: orders[index].userId);
-
-                                          Provider.of<OrderProvider>(context,listen: false)
-                                              .updateField(
-                                                  order, orders[index].docId);
-                                        },
-                                      ),
-//                                      Text(
-//                                        order[index].status,
-//                                        style: TextStyle(
-//                                          fontWeight: FontWeight.bold,
-//                                          fontSize: 18,
-//                                          color: kPrimaryTextColor,
-//                                        ),
-//                                      ),
-                                    ],
+                                  ],
                                   ),
                                 ),
                                 SizedBox(

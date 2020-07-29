@@ -4,6 +4,7 @@ import 'package:newFirebase_Project/models/products.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newFirebase_Project/ui/choosePlant/screen/CustomizePlant.dart';
+import 'package:newFirebase_Project/ui/choosePlant/screen/myCliper.dart';
 
 
 class ProductSection extends StatefulWidget {
@@ -15,9 +16,12 @@ class ProductSection extends StatefulWidget {
 class _ProductSectionState extends State<ProductSection> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
-     
+    return Stack(
+      
+  children: <Widget>[ 
+    Container(
       child: ListView.builder(
+        scrollDirection: Axis.vertical,
           itemCount: products.length,
           itemBuilder: (BuildContext context, index) {
             return Container(
@@ -49,7 +53,7 @@ class _ProductSectionState extends State<ProductSection> {
                 ),
                 trailing: IconButton(
                     icon: Icon(
-                      Icons.details,
+                      Icons.more_horiz,
                       color: kPrimaryColor,
                       size: 30,
                     ),
@@ -65,7 +69,9 @@ class _ProductSectionState extends State<ProductSection> {
               ),
             );
           },
-        ),
+      
+      ),),
+  ],
     );
   }
 }

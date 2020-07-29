@@ -1,8 +1,9 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:newFirebase_Project/models/order.dart';
 import 'package:newFirebase_Project/repositories/db_repository.dart';
 import 'package:newFirebase_Project/repositories/orderClient.dart';
 import 'package:newFirebase_Project/repositories/orderRepositry.dart';
-import 'package:flutter/cupertino.dart';
 
 class OrderProvider extends ChangeNotifier {
   addNewOrder(Order order) async {
@@ -40,6 +41,7 @@ class OrderProvider extends ChangeNotifier {
 
   updateField(Order order,String iD) async {
     await OrderRepository.orderRepository.updateFieldOrder(order,iD);
+    getAllOrderAdmin();
 notifyListeners();
   }
 

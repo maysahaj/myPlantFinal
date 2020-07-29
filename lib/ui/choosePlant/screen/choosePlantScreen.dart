@@ -1,5 +1,6 @@
 import 'package:newFirebase_Project/auth.dart';
 import 'package:newFirebase_Project/constant.dart';
+import 'package:newFirebase_Project/productionPage.dart';
 import 'package:newFirebase_Project/ui/home/homeScreen.dart';
 import 'package:newFirebase_Project/ui/choosePlant/screen/map.dart';
 import 'package:flutter/material.dart';
@@ -15,20 +16,12 @@ class ChoosePlantScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 2,
-      length: 4,
+      length:5,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0.0,
-          centerTitle: true,
-          title: Text(
-            'OurPlants',
-            style: GoogleFonts.pacifico(
-              color: kBackgroundColor,
-              fontSize: 25,
-              fontWeight: FontWeight.w200,
-            ),
-          ),
-          backgroundColor: kPrimaryColor2,
+           centerTitle: true,     
+          backgroundColor: kPrimaryColor,
           leading: IconButton(
             icon: Icon(
               Icons.keyboard_arrow_left
@@ -36,7 +29,7 @@ class ChoosePlantScreen extends StatelessWidget {
             color: kBackgroundColor,
             onPressed: ()async {
 //              await Provider.of<OrderProvider>(context,listen: false).deleteAllOrder() ;
-              Auth.auth.signOut();
+             await Auth.auth.signOut();
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
@@ -60,16 +53,7 @@ class ChoosePlantScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: TabBarView(
-          physics: NeverScrollableScrollPhysics(),
-          children: [
-            AllOrderScreen(),
-             MyMap(),
-            ProductSection(),
-            About(),
-          ],
-        ),
-        bottomNavigationBar:  Container(
+          bottomNavigationBar:  Container(
           height: 70.0,
           color: kPrimaryColor,
           child: TabBar(
@@ -102,11 +86,31 @@ class ChoosePlantScreen extends StatelessWidget {
                   size: 26,
                   
                 ),
+              ),
+                Tab(
+                icon:  Icon(
+                  FontAwesomeIcons.leaf,
+                  color: kBackgroundColor,
+                  size: 26,
+                  
+                ),
               )
             ],
             indicatorColor: kBackgroundColor,
             
           ),
+        ),
+      
+        body: 
+        TabBarView(
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            AllOrderScreen(),     
+             MyMap(),
+            ProductSectionpage(),
+            About(),
+            ProductSection(),
+          ],
         ),
       ),
     );

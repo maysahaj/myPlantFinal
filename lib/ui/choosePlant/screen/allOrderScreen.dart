@@ -223,39 +223,7 @@ class AllOrderScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                child: Divider(
-                                  color: kPrimaryColor,
-                                ),
-                                width: 320,
-                              ),
-                              Container(
-                                //color: Colors.deepOrange,
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 20),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Text(
-                                      'Status',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: kPrimaryColor2,
-                                      ),
-                                    ),
-                                    Text(
-                                      order[index].status,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        color: kPrimaryColor2,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+
                               SizedBox(
                                 child: Divider(
                                   color: kPrimaryColor,

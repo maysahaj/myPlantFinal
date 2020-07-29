@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:newFirebase_Project/constant.dart';
 import 'package:newFirebase_Project/models/order.dart';
 
-class Drinks extends StatelessWidget {
+class Plants extends StatelessWidget {
 final Order order;
-Drinks({ this.order});
+Plants({ this.order});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:kBackgroundColor,
       appBar: kAppBar(
         context,
-        'Card',
+        'Card Plant',
       ),
       body:
       Column(
@@ -23,7 +23,7 @@ Drinks({ this.order});
               itemCount: order.plants.length,
               itemBuilder: (context, index2) {
                 return ExpansionTile(
-                  backgroundColor: Color(0xFFF8E8D4),
+                  backgroundColor: kBackgroundColor,
                   title: Text(
                     order.plants[index2]['typePlant'],
                     style: TextStyle(
@@ -31,6 +31,7 @@ Drinks({ this.order});
                       fontSize: 18,
                     ),
                   ),
+                  
                   children: <Widget>[
                     Center(
                       child: Text(
@@ -44,6 +45,10 @@ Drinks({ this.order});
                     ),
                     SizedBox(
                       height: 5,
+                    ),
+                      Image.asset(
+                      order.plants[index2]['imageColumn'],
+                      height: 30,
                     ),
                     Divider(
                       color: kPrimaryColor,
@@ -88,7 +93,7 @@ Drinks({ this.order});
                               ),
                               SizedBox(width: 5),
                               Text(
-                                'Cups',
+                                'Plants',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
@@ -129,32 +134,6 @@ Drinks({ this.order});
                             ),
                           ),
                         ],
-                      ),
-                    ),
-                    Divider(
-                      color: kPrimaryColor,
-                    ),
-                    Container(
-                      //height: 100,
-                      //color: Colors.cyanAccent,
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Column(
-                            children: <Widget>[
-                              Text(
-                                'Sugar',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: kPrimaryColor2,
-                                ),
-                              ),
-                            ],
-                          ),
-                       ],
                       ),
                     ),
                     Divider(

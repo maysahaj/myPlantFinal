@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+// Colors that we use in our app
+const kTextColor = Color(0xFF3C4046);
+
+const double kDefaultPadding = 20.0;
 
 AppBar kAppBar(BuildContext context,String title,{List<Widget> actions}){
   return AppBar(
